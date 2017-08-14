@@ -1,8 +1,10 @@
 <h1 class="title"><%= @post.title %></h1>
 	<p class="date">
-		 Creado <%= time_ago_in_words(@post.created_at) %>
+		  <%# time_ago_in_words(@post.created_at) %> 
 </p>
 	<p class="body"><%= @post.body %></p>
+
+<%= image_tag @post.image.url(:medium) %>
 
 	<div id="comments">
 		<h2><%= @post.comments.count %> Comments</h2>
